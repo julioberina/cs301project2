@@ -7,13 +7,12 @@ float funcA(float x);
 float dfuncA(float x); // derivative of function a)
 float funcB(float x);
 float dfuncB(float x); // derivative of function b)
-int floatLength(float number);
 
 int main()
 {
-  float xp = 0.0; //previous
-  float xn = 0.0; //next
-  float e = 0.0; //error
+  float xp = 0.0; // previous
+  float xn = 0.0; // next
+  float e = 0.0; // error
   char errorType = ' ';
 
   // Function A
