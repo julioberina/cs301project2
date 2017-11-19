@@ -42,7 +42,7 @@ int main()
     else if (matchesSign(funcA(b), funcA(c)))
       b = c;
 
-    if (e < 0.01)
+    if (abs(e) < 0.01)
     {
       cout << endl << "Root found:  x = " << c << endl;
       break;
@@ -87,7 +87,7 @@ int main()
     else if (matchesSign(funcB(b), funcB(c)))
       b = c;
 
-    if (e < 0.01)
+    if (abs(e) < 0.01)
     {
       cout << endl << "Root found:  x = " << c << endl;
       break;
