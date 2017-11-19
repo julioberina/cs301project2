@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <cmath>
 using namespace std;
 
@@ -8,7 +9,7 @@ bool matchesSign(float a, float b);
 
 int main()
 {
-  float a, b, c, e = 1, cp; // cp for error purposes
+  float a, b, c, e = 1, cp = 0; // cp for error purposes
   char errorType;
   
   // Function A
@@ -58,6 +59,7 @@ int main()
 
   // Function B
   
+  cp = 0;
   cout << endl << "Function B" << endl << "Enter a:  ";
   cin >> a;
   cout << "Enter b:  ";
