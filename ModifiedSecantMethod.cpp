@@ -21,7 +21,7 @@ int main()
   cin >> xp;
   cout << "Use (a)pproximate error or (t)rue error:  ";
   cin >> errorType;
-  cout << endl << "n\txp\txp*delta\tf(xp)\tf(xp+d)\txn\terr" << endl;
+  cout << endl << "n\txp\txp*delta\tf(xp)\tf(xp+d*xp)\txn\terr" << endl;
 
   for (int n = 0; n < 100; ++n)
   {
@@ -29,7 +29,7 @@ int main()
     cout << setprecision(3) << xp << "\t";
     cout << setprecision(3) << xp*delta << "\t";
     cout << setprecision(3) << funcA(xp) << "\t";
-    cout << setprecision(3) << funcA(xp*delta) << "\t";
+    cout << setprecision(3) << funcA(xp + xp*delta) << "\t";
 
     xn = xp - ((delta*xp*funcA(xp)) / (funcA(xp + delta*xp) - funcA(xp)));
     cout << setprecision(3) << xn << "\t";
@@ -67,7 +67,7 @@ int main()
     cout << setprecision(3) << xp << "\t";
     cout << setprecision(3) << xp*delta << "\t";
     cout << setprecision(3) << funcB(xp) << "\t";
-    cout << setprecision(3) << funcB(xp*delta) << "\t";
+    cout << setprecision(3) << funcB(xp + xp*delta) << "\t";
 
     xn = xp - ((delta*xp*funcB(xp)) / (funcB(xp + delta*xp) - funcB(xp)));
     cout << setprecision(3) << xn << "\t";

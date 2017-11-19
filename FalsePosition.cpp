@@ -29,7 +29,7 @@ int main()
   {
     cout << n << "\t" << a << "\t" << b << "\t";
     cout << funcA(a) << "\t" << funcA(b) << "\t";
-    c = (a + b) / 2;
+    c = (a*funcA(b) - b*funcA(a)) / (funcA(b) - funcA(a));
     cout << c << "\t" << funcA(c) << "\t";
 
     if ((errorType == 'a' || errorType == 'A') && n > 0)
@@ -74,7 +74,7 @@ int main()
   {
     cout << n << "\t" << a << "\t" << b << "\t";
     cout << funcB(a) << "\t" << funcB(b) << "\t";
-    c = (a + b) / 2;
+    c = (a*funcB(b) - b*funcB(a)) / (funcB(b) - funcB(a));
     cout << c << "\t" << funcB(c) << "\t";
 
     if ((errorType == 'a' || errorType == 'A') && n > 0)
