@@ -20,8 +20,6 @@ int main()
   cout << "Function A" << endl;
   cout << "Enter initial guess (x0):  ";
   cin >> xp;
-  cout << "Use (a)pproximate error or (t)rue error:  ";
-  cin >> errorType;
   cout << endl << "n\txn\tf(x)\tf'(x)\txn+1\terr\t" << endl;
 
   for (int n = 0; n < 100; ++n)
@@ -34,8 +32,7 @@ int main()
     xn = xp - (funcA(xp) / dfuncA(xp));
     cout << setprecision(3) << xn << "\t";
 
-    if (errorType == 'a' || errorType == 'A')
-      e = (xn - xp) / xn;
+    e = (xn - xp) / xn;
 
     cout << abs(e) << endl;
     xp = xn;

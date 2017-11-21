@@ -21,8 +21,6 @@ int main()
   cin >> xp1;
   cout << "Enter second guess:  ";
   cin >> xp2;
-  cout << "Use (a)pproximate error or (t)rue error:  ";
-  cin >> errorType;
   cout << endl << "n\txp1\txp2\tf(xp1)\tf(xp2)\txn\terr" << endl;
 
   for (int n = 0; n < 100; ++n)
@@ -36,8 +34,7 @@ int main()
     xn = xp2 - (funcA(xp2) / ((funcA(xp2) - funcA(xp1)) / xp2 - xp1));
     cout << setprecision(3) << xn << "\t";
 
-    if (errorType == 'a' || errorType == 'A')
-      e = (xn - xp2) / xn;
+    e = (xn - xp2) / xn;
 
     cout << abs(e) << endl;
 

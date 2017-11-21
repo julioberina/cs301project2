@@ -19,8 +19,6 @@ int main()
   cin >> a;
   cout << "Enter b:  ";
   cin >> b;
-  cout << "Use (a)pproximate error or (t)rue error?:  ";
-  cin >> errorType;
   cout << endl;
 
   cout << "n\ta\tb\tf(a)\tf(b)\tc\tf(c)\te" << endl;
@@ -32,7 +30,7 @@ int main()
     c = (a + b) / 2;
     cout << c << "\t" << funcA(c) << "\t";
 
-    if ((errorType == 'a' || errorType == 'A') && n > 0)
+    if (n > 0)
       e = (c - cp) / c;
 
     cout << e << endl;
