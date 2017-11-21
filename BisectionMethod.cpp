@@ -79,6 +79,8 @@ int main()
 
     if ((errorType == 'a' || errorType == 'A') && n > 0)
       e = (c - cp) / c;
+    else if ((errorType == 't' || errorType == 'T'))
+      e = (126.632 - c) / 126.632; // 126.632 is the real root
 
     cout << e << endl;
 

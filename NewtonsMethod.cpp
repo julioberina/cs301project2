@@ -72,6 +72,8 @@ int main()
 
     if (errorType == 'a' || errorType == 'A')
       e = (xn - xp) / xn;
+    else if (errorType == 't' || errorType == 'T')
+      e = (126.632 - xn) / 126.632;
 
     cout << abs(e) << endl;
     xp = xn;
